@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular - Contaduría Pública</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Malla Curricular - Lic. Contaduría Pública (Pensum Nuevo)</h1>
+        <p>Haz clic en una materia para marcarla como aprobada.</p>
+        <button id="resetButton">Reiniciar Malla</button>
+    </header>
+
+    <main id="malla-curricular">
+        <section class="semestre" id="semestre-1">
+            <h2>Semestre 1 (6 materias, 14 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="006-1922" data-creditos="2" data-prelac="">
+                    <span class="codigo">006-1922</span>
+                    <span class="nombre">Expresión Oral y Escrita</span>
+                </div>
+                <div class="materia" data-codigo="007-1513" data-creditos="2" data-prelac="">
+                    <span class="codigo">007-1513</span>
+                    <span class="nombre">Inglés I para Ciencias Administrativas</span>
+                </div>
+                <div class="materia" data-codigo="008-1613" data-creditos="2" data-prelac="">
+                    <span class="codigo">008-1613</span>
+                    <span class="nombre">Matemáticas I</span>
+                </div>
+                <div class="materia" data-codigo="009-1012" data-creditos="2" data-prelac="">
+                    <span class="codigo">009-1012</span>
+                    <span class="nombre">Desarrollo de Destrezas para el Aprendizaje</span>
+                </div>
+                <div class="materia" data-codigo="091-1013" data-creditos="3" data-prelac="">
+                    <span class="codigo">091-1013</span>
+                    <span class="nombre">Introducción a la Administración y Contaduría</span>
+                </div>
+                <div class="materia" data-codigo="xxx-xxx1" data-creditos="3" data-prelac="">
+                    <span class="codigo">xxx-xxx1</span>
+                    <span class="nombre">Extra Académica Cultural ó Deportiva</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-2">
+            <h2>Semestre 2 (6 materias, 16 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="007-1523" data-creditos="3" data-prelac="007-1513">
+                    <span class="codigo">007-1523</span>
+                    <span class="nombre">Inglés II para Ciencias Administrativas</span>
+                </div>
+                <div class="materia" data-codigo="008-1623" data-creditos="3" data-prelac="008-1613">
+                    <span class="codigo">008-1623</span>
+                    <span class="nombre">Matemáticas II</span>
+                </div>
+                <div class="materia" data-codigo="011-1623" data-creditos="3" data-prelac="">
+                    <span class="codigo">011-1623</span>
+                    <span class="nombre">Problemática del Desarrollo Socio-económico de Venezuela</span>
+                </div>
+                <div class="materia" data-codigo="091-1323" data-creditos="3" data-prelac="">
+                    <span class="codigo">091-1323</span>
+                    <span class="nombre">Contabilidad Básica I</span>
+                </div>
+                <div class="materia" data-codigo="091-1822" data-creditos="2" data-prelac="">
+                    <span class="codigo">091-1822</span>
+                    <span class="nombre">Informática I</span>
+                </div>
+                <div class="materia" data-codigo="xxx-xxx2" data-creditos="2" data-prelac="">
+                    <span class="codigo">xxx-xxx2</span>
+                    <span class="nombre">Electiva Socio-Humanística</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-3">
+            <h2>Semestre 3 (6 materias, 18 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-2333" data-creditos="3" data-prelac="091-1323">
+                    <span class="codigo">091-2333</span>
+                    <span class="nombre">Contabilidad Básica II</span>
+                </div>
+                <div class="materia" data-codigo="091-2833" data-creditos="3" data-prelac="091-1822">
+                    <span class="codigo">091-2833</span>
+                    <span class="nombre">Informática II</span>
+                </div>
+                <div class="materia" data-codigo="091-2933" data-creditos="3" data-prelac="008-1623">
+                    <span class="codigo">091-2933</span>
+                    <span class="nombre">Matemáticas Financieras I</span>
+                </div>
+                <div class="materia" data-codigo="092-2233" data-creditos="3" data-prelac="">
+                    <span class="codigo">092-2233</span>
+                    <span class="nombre">Administración de Empresas I</span>
+                </div>
+                <div class="materia" data-codigo="092-2633" data-creditos="3" data-prelac="">
+                    <span class="codigo">092-2633</span>
+                    <span class="nombre">Fundamentos del Derecho</span>
+                </div>
+                <div class="materia" data-codigo="092-2733" data-creditos="3" data-prelac="">
+                    <span class="codigo">092-2733</span>
+                    <span class="nombre">Economía I</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-4">
+            <h2>Semestre 4 (6 materias, 17 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-2343" data-creditos="3" data-prelac="091-2333">
+                    <span class="codigo">091-2343</span>
+                    <span class="nombre">Contabilidad Avanzada I</span>
+                </div>
+                <div class="materia" data-codigo="091-2943" data-creditos="3" data-prelac="091-2933">
+                    <span class="codigo">091-2943</span>
+                    <span class="nombre">Matemáticas Financieras II</span>
+                </div>
+                <div class="materia" data-codigo="092-2243" data-creditos="3" data-prelac="092-2233">
+                    <span class="codigo">092-2243</span>
+                    <span class="nombre">Administración de Empresas II</span>
+                </div>
+                <div class="materia" data-codigo="092-2643" data-creditos="3" data-prelac="092-2633">
+                    <span class="codigo">092-2643</span>
+                    <span class="nombre">Derecho Mercantil</span>
+                </div>
+                <div class="materia" data-codigo="092-2743" data-creditos="3" data-prelac="092-2733">
+                    <span class="codigo">092-2743</span>
+                    <span class="nombre">Economía II</span>
+                </div>
+                <div class="materia" data-codigo="xxx-xxx3" data-creditos="2" data-prelac="">
+                    <span class="codigo">xxx-xxx3</span>
+                    <span class="nombre">Electiva Socio-Humanística</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-5">
+            <h2>Semestre 5 (6 materias, 17 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-3353" data-creditos="3" data-prelac="091-2343">
+                    <span class="codigo">091-3353</span>
+                    <span class="nombre">Contabilidad Avanzada II</span>
+                </div>
+                <div class="materia" data-codigo="091-3853" data-creditos="3" data-prelac="">
+                    <span class="codigo">091-3853</span>
+                    <span class="nombre">Estadística I</span>
+                </div>
+                <div class="materia" data-codigo="092-3253" data-creditos="3" data-prelac="">
+                    <span class="codigo">092-3253</span>
+                    <span class="nombre">Administración de Recursos Humanos</span>
+                </div>
+                <div class="materia" data-codigo="092-3653" data-creditos="3" data-prelac="092-2633">
+                    <span class="codigo">092-3653</span>
+                    <span class="nombre">Derecho Laboral</span>
+                </div>
+                <div class="materia" data-codigo="092-3753" data-creditos="3" data-prelac="092-2743">
+                    <span class="codigo">092-3753</span>
+                    <span class="nombre">Moneda, Banca y Crédito</span>
+                </div>
+                <div class="materia" data-codigo="xxx-xxx4" data-creditos="2" data-prelac="">
+                    <span class="codigo">xxx-xxx4</span>
+                    <span class="nombre">Electiva Profesional</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-6">
+            <h2>Semestre 6 (6 materias, 16 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-3063" data-creditos="3" data-prelac="091-3353">
+                    <span class="codigo">091-3063</span>
+                    <span class="nombre">Ajuste por Inflación</span>
+                </div>
+                <div class="materia" data-codigo="091-3363" data-creditos="3" data-prelac="091-3353">
+                    <span class="codigo">091-3363</span>
+                    <span class="nombre">Contabilidad Avanzada III</span>
+                </div>
+                <div class="materia" data-codigo="091-3563" data-creditos="3" data-prelac="091-3353">
+                    <span class="codigo">091-3563</span>
+                    <span class="nombre">Contabilidad de Costos I</span>
+                </div>
+                <div class="materia" data-codigo="091-3863" data-creditos="3" data-prelac="091-3853">
+                    <span class="codigo">091-3863</span>
+                    <span class="nombre">Estadística II</span>
+                </div>
+                <div class="materia" data-codigo="092-3062" data-creditos="2" data-prelac="">
+                    <span class="codigo">092-3062</span>
+                    <span class="nombre">Metodología de la Investigación</span>
+                </div>
+                <div class="materia" data-codigo="092-3763" data-creditos="2" data-prelac="092-3753">
+                    <span class="codigo">092-3763</span>
+                    <span class="nombre">Finanzas Públicas</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-7">
+            <h2>Semestre 7 (6 materias, 17 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-4373" data-creditos="3" data-prelac="092-3763">
+                    <span class="codigo">091-4373</span>
+                    <span class="nombre">Tributos I</span>
+                </div>
+                <div class="materia" data-codigo="091-4474" data-creditos="4" data-prelac="091-3363">
+                    <span class="codigo">091-4474</span>
+                    <span class="nombre">Auditoría I</span>
+                </div>
+                <div class="materia" data-codigo="091-4573" data-creditos="3" data-prelac="091-3563">
+                    <span class="codigo">091-4573</span>
+                    <span class="nombre">Contabilidad de Costos II</span>
+                </div>
+                <div class="materia" data-codigo="091-4873" data-creditos="3" data-prelac="091-3363">
+                    <span class="codigo">091-4873</span>
+                    <span class="nombre">Análisis de Estados Financieros</span>
+                </div>
+                <div class="materia" data-codigo="092-4972" data-creditos="2" data-prelac="092-3763">
+                    <span class="codigo">092-4972</span>
+                    <span class="nombre">Presupuesto Público</span>
+                </div>
+                <div class="materia" data-codigo="xxx-xxx2" data-creditos="2" data-prelac="">
+                    <span class="codigo">xxx-xxx2</span>
+                    <span class="nombre">Electiva Profesional</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-8">
+            <h2>Semestre 8 (6 materias, 16 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-4382" data-creditos="2" data-prelac="092-4972">
+                    <span class="codigo">091-4382</span>
+                    <span class="nombre">Contabilidad Gubernamental</span>
+                </div>
+                <div class="materia" data-codigo="091-4383" data-creditos="3" data-prelac="091-4373">
+                    <span class="codigo">091-4383</span>
+                    <span class="nombre">Tributos II</span>
+                </div>
+                <div class="materia" data-codigo="091-4483" data-creditos="3" data-prelac="091-4474">
+                    <span class="codigo">091-4483</span>
+                    <span class="nombre">Auditoría II</span>
+                </div>
+                <div class="materia" data-codigo="091-4582" data-creditos="2" data-prelac="091-4573">
+                    <span class="codigo">091-4582</span>
+                    <span class="nombre">Contabilidad de Costos III</span>
+                </div>
+                <div class="materia" data-codigo="091-4583" data-creditos="3" data-prelac="091-4873">
+                    <span class="codigo">091-4583</span>
+                    <span class="nombre">Contabilidades Especiales I</span>
+                </div>
+                <div class="materia" data-codigo="092-4183" data-creditos="3" data-prelac="">
+                    <span class="codigo">092-4183</span>
+                    <span class="nombre">Sistemas y Procedimientos Administrativos y Contables</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-9">
+            <h2>Semestre 9 (6 materias, 16 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-5392" data-creditos="2" data-prelac="">
+                    <span class="codigo">091-5392</span>
+                    <span class="nombre">Contabilidad Computarizada</span>
+                </div>
+                <div class="materia" data-codigo="091-5393" data-creditos="3" data-prelac="091-4383">
+                    <span class="codigo">091-5393</span>
+                    <span class="nombre">Tributos III</span>
+                </div>
+                <div class="materia" data-codigo="091-5493" data-creditos="3" data-prelac="091-4483">
+                    <span class="codigo">091-5493</span>
+                    <span class="nombre">Auditoría III</span>
+                </div>
+                <div class="materia" data-codigo="091-5593" data-creditos="3" data-prelac="091-4583">
+                    <span class="codigo">091-5593</span>
+                    <span class="nombre">Contabilidades Especiales II</span>
+                </div>
+                <div class="materia" data-codigo="091-5992" data-creditos="2" data-prelac="091-4582">
+                    <span class="codigo">091-5992</span>
+                    <span class="nombre">Presupuesto de las Empresas</span>
+                </div>
+                <div class="materia" data-codigo="091-5993" data-creditos="3" data-prelac="">
+                    <span class="codigo">091-5993</span>
+                    <span class="nombre">Finanzas Corporativas</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="semestre" id="semestre-10">
+            <h2>Semestre 10 (2 materias, 12 créditos)</h2>
+            <div class="materias-grid">
+                <div class="materia" data-codigo="091-5509" data-creditos="9" data-prelac="">
+                    <span class="codigo">091-5509</span>
+                    <span class="nombre">Trabajo de Grado</span>
+                </div>
+                <div class="materia" data-codigo="091-5603" data-creditos="3" data-prelac="091-5393">
+                    <span class="codigo">091-5603</span>
+                    <span class="nombre">Ética Profesional</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
