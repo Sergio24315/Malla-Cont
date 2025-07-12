@@ -41,18 +41,33 @@ header p {
 }
 
 #malla-curricular {
-    max-width: 1200px;
+    /* Eliminamos el max-width para que los semestres puedan expandirse horizontalmente */
+    /* max-width: 1200px; */
     margin: 30px auto;
     padding: 0 20px;
+    /* Para que los semestres se coloquen uno al lado del otro */
+    display: flex; /* Hacemos que la malla sea un contenedor flex */
+    flex-wrap: wrap; /* Permitimos que los semestres se envuelvan si no hay espacio */
+    justify-content: center; /* Centra los semestres en el contenedor */
+    align-items: flex-start; /* Alinea los semestres a la parte superior */
+    gap: 20px; /* Espacio entre los semestres */
+    overflow-x: auto; /* Permite desplazamiento horizontal si los semestres se salen */
+    padding-bottom: 20px; /* Espacio inferior para el scrollbar */
 }
 
 .semestre {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; Ya no es necesario con el gap del contenedor padre */
     padding: 20px;
     border-left: 5px solid #3498db;
+    /* Ajustes para el diseño horizontal de cada semestre */
+    flex: 0 0 auto; /* No crecer, no encoger, tamaño basado en el contenido */
+    width: 350px; /* Un ancho fijo para cada columna de semestre */
+    min-height: 400px; /* Asegura una altura mínima para columnas más cortas */
+    display: flex; /* Hacemos el semestre un contenedor flex */
+    flex-direction: column; /* Apilamos el título y las materias verticalmente */
 }
 
 .semestre h2 {
@@ -61,12 +76,15 @@ header p {
     margin-bottom: 20px;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+    text-align: center; /* Centrar el título del semestre */
 }
 
 .materias-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    /* Aquí es donde cambiamos de Grid a Flexbox para la disposición de las materias */
+    display: flex;
+    flex-direction: column; /* Apila las materias verticalmente dentro del semestre */
+    gap: 15px; /* Espacio entre materias */
+    flex-grow: 1; /* Permite que el grid ocupe el espacio restante dentro del semestre */
 }
 
 .materia {
@@ -83,6 +101,7 @@ header p {
     text-align: center;
     min-height: 90px; /* Altura mínima para uniformidad */
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: auto; /* Elimina min-width para que se ajuste al 100% del semestre */
 }
 
 .materia:hover:not(.aprobada):not(.bloqueada) {
@@ -98,7 +117,7 @@ header p {
     text-decoration: line-through;
     opacity: 0.9;
     cursor: default;
-    pointer-events: none; /* Deshabilita clics en materias aprobadas */
+    /* pointer-events: none; */// Se maneja en JS
 }
 
 .materia.bloqueada {
@@ -107,7 +126,7 @@ header p {
     border-color: #95a5a6;
     cursor: not-allowed;
     opacity: 0.7;
-    pointer-events: none; /* Deshabilita clics en materias bloqueadas */
+    /* pointer-events: none; */// Se maneja en JS
 }
 
 .materia .codigo {
@@ -153,8 +172,21 @@ header p {
     color: #666;
 }
 
-@media (max-width: 768px) {
-    .materias-grid {
-        grid-template-columns: 1fr;
+/* Media Query para pantallas más pequeñas - vuelve a apilar verticalmente */
+@media (max-width: 900px) { /* Ajusta este valor si necesitas que se apile antes o después */
+    #malla-curricular {
+        flex-direction: column; /* Apila los semestres verticalmente */
+        align-items: center; /* Centra los semestres */
+        overflow-x: hidden; /* No hay scroll horizontal en esta vista */
     }
-} 
+
+    .semestre {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
+        margin-bottom: 20px; /* Añade margen inferior entre semestres */
+        min-height: auto; /* Altura automática */
+    }
+
+    .materias-grid {
+        /* No es necesario cambiar, ya están en column */
+    }
+}
